@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+*.env
+.env.*
+venv/
+venv\
+.venv/
+ENV/
+env/
+*.egg-info/
+*.egg
+build/
+dist/
+
+# Django
+staticfiles/
+media/
+backend/staticfiles/
+# local sqlite db
+backend/db.sqlite3
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Vite build
+frontend/dist/
+
+# Logs
+*.log
+logs/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# macOS
+.DS_Store
+
+# Tests
+.pytest_cache/
+coverage/
+
+# Secrets
+secrets.json
+.env
+
+# System files
+Thumbs.db
+
+# Editor temporary files
+*~
+*.swp
+
+# Render / hosting
+render.yaml
+
+# Misc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
