@@ -150,8 +150,8 @@ This repository includes configuration files to simplify deployment:
 Use Render with the provided `render.yaml` at the project root:
 - Backend service:
   - Root: `backend`
-  - Build command: `pip install -r requirements.txt`
-  - Start command: `daphne -b 0.0.0.0 -p $PORT backend.asgi:application`
+  - Build command: `python -m pip install --upgrade pip && python -m pip install -r requirements.txt`
+  - Start command: `python -m daphne -b 0.0.0.0 -p $PORT backend.asgi:application`
   - Environment Vars:
     - `DATABASE_URL`
     - `SECRET_KEY`
@@ -165,6 +165,9 @@ Use Render with the provided `render.yaml` at the project root:
   - Environment Vars:
     - `VITE_API_URL=https://<your-render-subdomain>.onrender.com/api/`
     - `VITE_WS_URL=wss://<your-render-subdomain>.onrender.com`
+
+#### Render troubleshooting for exit 127
+If Render shows `Exited with status 127`, it usually means the command could not be found in the environment. The recommended fix is to use module execution with `python -m` for both package installation and Daphne startup.
 
 ### 6. Vercel Deployment
 If you deploy only the frontend on Vercel:
